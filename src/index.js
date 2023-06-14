@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import App from './App';
+import PrivateRoute from './components/PrivateRoute';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import CartScreen from './screens/CartScreen';
@@ -27,7 +28,10 @@ const router = createBrowserRouter(
       <Route path='/cart' element={<CartScreen />} />
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
-      <Route path='/shipping' element={<ShippingScreen />} />
+      {/* Registered users */}
+      <Route path='' element={<PrivateRoute />}>
+        <Route path='/shipping' element={<ShippingScreen />} />
+      </Route>
     </Route>
   )
 );
