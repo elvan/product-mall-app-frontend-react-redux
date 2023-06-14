@@ -1,3 +1,4 @@
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import 'bootswatch/dist/zephyr/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -46,7 +47,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
-    <RouterProvider router={router} />
+    <PayPalScriptProvider deferLoading={true}>
+      <RouterProvider router={router} />
+    </PayPalScriptProvider>
   </Provider>
 );
 
