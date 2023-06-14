@@ -3,6 +3,7 @@ import { Button, Col, Form, Row, Table } from 'react-bootstrap';
 import { FaTimes } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
+
 import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
@@ -123,7 +124,7 @@ const ProfileScreen = () => {
             <tbody>
               {orders.map((order) => (
                 <tr key={order._id}>
-                  <td>{order._id}</td>
+                  <tD>{order._id}</tD>
                   <td>{order.createdAt.substring(0, 10)}</td>
                   <td>{order.totalPrice}</td>
                   <td>
