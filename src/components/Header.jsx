@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../slices/authSlice';
-import { useLogoutMutation } from '../slices/userApiSlice';
+import { useLogoutMutation } from '../slices/usersApiSlice';
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -70,6 +70,9 @@ const Header = () => {
 
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown align={'end'} title='Admin' id='adminmenu'>
+                  <LinkContainer to='/admin/productlist'>
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
                   <LinkContainer to='/admin/orderlist'>
                     <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>

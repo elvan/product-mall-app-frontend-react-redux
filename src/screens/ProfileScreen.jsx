@@ -8,8 +8,8 @@ import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { setCredentials } from '../slices/authSlice';
-import { useGetMyOrdersQuery } from '../slices/orderApiSlice';
-import { useProfileMutation } from '../slices/userApiSlice';
+import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
+import { useProfileMutation } from '../slices/usersApiSlice';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import FormContainer from '../components/FormContainer';
 import Loader from '../components/Loader';
 import { setCredentials } from '../slices/authSlice';
-import { useRegisterMutation } from '../slices/userApiSlice';
+import { useRegisterMutation } from '../slices/usersApiSlice';
 
 const RegisterScreen = () => {
   const [name, setName] = useState('');

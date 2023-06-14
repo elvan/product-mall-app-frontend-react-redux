@@ -7,7 +7,7 @@ import CheckoutSteps from '../components/CheckoutSteps';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { clearCartItems } from '../slices/cartSlice';
-import { useCreateOrderMutation } from '../slices/orderApiSlice';
+import { useCreateOrderMutation } from '../slices/ordersApiSlice';
 
 const PlaceOrderScreen = () => {
   const navigate = useNavigate();
