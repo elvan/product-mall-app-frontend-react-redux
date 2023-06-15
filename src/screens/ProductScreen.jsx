@@ -13,6 +13,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import Meta from '../components/Meta';
 import Rating from '../components/Rating';
 import { addToCart } from '../slices/cartSlice';
 import {
@@ -76,6 +77,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta title={product.name} description={product.description} />
           <Row>
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />

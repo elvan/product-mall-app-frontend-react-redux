@@ -2,6 +2,7 @@ import { Col, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import Meta from '../components/Meta';
 import Paginate from '../components/Paginate';
 import Product from '../components/Product';
 import ProductCarousel from '../components/ProductCarousel';
@@ -32,6 +33,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta />
           <h1>Latest Products</h1>
           <Row>
             {data.products.map((product) => (
